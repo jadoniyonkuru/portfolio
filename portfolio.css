@@ -1,1 +1,93 @@
+/* General Styles */
+:root {
+    --bg-color-light: #f5f5f5;
+    --text-color-light: #333333;
+    --bg-color-dark: #121212;
+    --text-color-dark: #f1f1f1;
+    --primary-color: #4CAF50;
+    --secondary-bg-color: #eaeaea;
+    --button-hover-color: #45a049;
+    transition: all 0.3s ease-in-out;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navigation */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--button-hover-color);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: var(--secondary-bg-color);
+}
+
+/* About Section */
+.about {
+    background-color: var(--bg-color-light);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.About-image{
+    height:400px;
+    width: 400;
+    border-radius: 20%;
+  overflow: hidden;
+  object-fit: cover;
+  padding: 0px;
+  background-color: #fff;
+
+}
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    overflow-x: auto;
+}
+
+.skill-bar-container {
+    background: #ddd;
+    border-radius: 12px;
+}
+
+/* Footer */
+footer {
+    background: var(--primary-color);
+}
 
