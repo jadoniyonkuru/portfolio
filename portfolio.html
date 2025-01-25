@@ -30,11 +30,11 @@
     <section id="about" class="about">
         <h2>About Me</h2>
         <div class="about-content">
-            <img src="jado.jpeg" alt="My Picture">
+            <div> <img src="jado.jpeg" alt="My Picture" class="About-image"></div>
             <div class="about-text">
                 <p>Hi, I'm Jean de Dieu NIYONKURU. <br>
                     A dedicated professional specializing in UI/UX Designer and Front-End Developer <br>
-                    With skills Html, css, javascript and react</p>
+                    With skills in HTML, CSS, JavaScript, and React.</p>
                 <button class="toggle-btn">Download CV</button>
             </div>
         </div>
@@ -63,33 +63,36 @@
             </div>
         </div>
     </section>
+    
 
     <section id="resume" class="resume">
         <h2>Resume</h2>
         <p>am certified in back-end and front end and am a developer with different languages</p>
     </section>
 
-    <section id="projects" class="projects">
+    <section class="projects">
         <h2>My Projects</h2>
-        <button class="toggle-btn" id="toggle-projects" onclick="toggleProjects()">View My Projects</button>
-        <div class="projects hidden" id="projects-section">
-            <div class="projects-container">
-                <div class="project-box">
-                    <p>Project 1</p>
-                </div>
-                <div class="project-box">
-                    <p>Project 2</p>
-                </div>
-                <div class="project-box">
-                    <p>Project 3</p>
-                </div>
+        <div class="projects-container">
+            
+            <div class="project-card">
+                <h3>Project 1</h3>
+                <p>This is a brief description of Project 1. Add more details as needed.</p>
+                <a href="#">View More</a>
             </div>
+            
+            <div class="project-card">
+                <h3>Project 2</h3>
+                <p>This is a brief description of Project 2. Customize the text here.</p>
+                <a href="#">View More</a>
+            </div>
+            
         </div>
     </section>
+    
 
     <section id="contact" class="contact">
         <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+        <p>Email: <a href="mailto:your-email@example.com">jeanniyonkuru001@gmail.com</a></p>
         <p>WhatsApp: <a href="https://wa.me/1234567890" target="_blank">Chat with me</a></p>
         <form>
             <input type="text" placeholder="Your Name" required>
@@ -97,13 +100,16 @@
             <textarea placeholder="Your Message" rows="5" required></textarea>
             <button type="submit">Send</button>
         </form>
+        <button id="scrollToTopBtn" class="scroll-to-top-btn">
+            &#8679; <!-- Upwards Arrow Unicode -->
+        </button>
     </section>
 
     <footer>
         &copy; 2025 My Portfolio. All rights reserved.
     </footer>
 
-    <script src="script.js"></script>
+    <script src="portfolio.js"></script>
 </body>
 </html>
 

@@ -18,6 +18,86 @@ body {
     color: var(--text-color-light);
     scroll-behavior: smooth;
 }
+/* Default styles for light mode */
+body {
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button.toggle-btn {
+    background-color: #4CAF50; /* Green by default */
+    color: white;
+    border-radius: 5px;
+}
+
+/* Dark theme styles */
+body.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-theme header {
+    background-color: #333;
+}
+
+body.dark-theme footer {
+    background-color: #333;
+}
+
+body.dark-theme .skills-box {
+    background-color: #444;
+    color: #e0e0e0;
+}
+
+body.dark-theme .project-card {
+    background-color: #444;
+    color: #e0e0e0;
+}
+
+body.dark-theme .toggle-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-theme .about-text {
+    color: #e0e0e0;
+}
+
+/* Skills section - initially hidden */
+.skills.hidden {
+    display: none;
+}
+
+/* Button for hiding/showing skills */
+button.toggle-btn {
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+button.toggle-btn:hover {
+    opacity: 0.8;
+}
+
+/* Dark theme button appearance */
+body.dark-theme button.toggle-btn {
+    background-color: #4CAF50;
+}
+
+/* Style for button when skills are shown */
+button.toggle-btn.hide-skills {
+    background-color: #f44336; /* Red when hiding */
+}
+
+
 
 /* Header */
 header {
@@ -78,16 +158,210 @@ nav a:hover {
 /* Skills Section */
 .skills-container {
     display: flex;
-    overflow-x: auto;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.skills-box {
+    width: 200px;
+    padding: 15px;
+    background: #4CAF50;
+    color: white;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .skill-bar-container {
     background: #ddd;
-    border-radius: 12px;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 25px;
+    margin-top: 10px;
 }
+
+.skill-bar {
+    background: white;
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+/*resume section*/
+#resume{
+    text-align: center;
+}
+
+/* Projects Section */
+.projects {
+    background: #1a1a2e;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    background: linear-gradient(90deg, #4facfe, #00f2fe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 40px;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card {
+    background: #808080; /* Gray background for the cards */
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px; /* Fixed width for consistent size */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Slightly stronger shadow on hover */
+}
+
+.project-card h3 {
+    font-size: 1.5em;
+    color: #fff; /* White for contrast with gray background */
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    font-size: 1em;
+    color: #eaeaea; /* Light gray for description text */
+    margin-bottom: 15px;
+}
+
+.project-card a {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1em;
+    background: linear-gradient(90deg, #4facfe, #00f2fe);
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.project-card a:hover {
+    opacity: 0.9;
+}
+
+
+
+/* Contact Section */
+.contact {
+    /*background-color: #1a1a2e;  Dark background */
+    color: #fff; /* White text */
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* Gradient title */
+.contact h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    background: linear-gradient(90deg, #4facfe, #00f2fe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 40px;
+}
+
+/* Form styling */
+.contact form {
+    /*background-color: #2e2e3d; /* Form background */
+    padding: 30px 20px;
+    border-radius: 15px; /* Rounded corners */
+    width: 100%;
+    max-width: 500px;
+    /*box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);*/
+}
+
+/* Form input and textarea */
+.contact form label {
+    display: block;
+    font-size: 1em;
+    margin-bottom: 5px;
+    color: #ccc;
+    text-align: left;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3e3e4e; /* Input background */
+    color: #fff;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+    outline: none;
+    border: 1px solid #4facfe;
+}
+
+/* Submit button */
+.contact form button {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    background: linear-gradient(90deg, #4facfe, #00f2fe);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact form button:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
 
 /* Footer */
 footer {
     background: var(--primary-color);
 }
+/* Scroll to Top Button */
+.scroll-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-to-top-btn:hover {
+    background-color: #45a049;
+}
+
 
