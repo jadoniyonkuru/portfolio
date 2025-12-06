@@ -54,3 +54,66 @@ document.querySelector("form").addEventListener("submit", function(event) {
 const btn = document.getElementById("scrollToTopBtn");
 window.onscroll = () => btn.style.display = (document.documentElement.scrollTop > 100) ? "block" : "none";
 btn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+// Function to download CV
+function downloadCV() {
+    try {
+        const link = document.createElement('a');
+        link.href = 'Jean de Dieu-NIYONKURU-Resume.pdf'; // Updated to match your actual resume filename
+        link.download = 'Jean_de_Dieu_NIYONKURU_Resume.pdf'; // Suggested filename for download
+        link.target = '_blank'; // Open in new tab if download fails
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    } catch (error) {
+        console.error('Error downloading CV:', error);
+        alert('There was an error downloading the resume. Please try again.');
+    }
+}
+
+// Function to toggle resume sections (Work Experience, Education, Achievements)
+function toggleResumeSection(header) {
+    const content = header.nextElementSibling;
+    const isCollapsed = content.classList.contains('collapsed');
+    
+    // Toggle classes
+    if (isCollapsed) {
+        content.classList.remove('collapsed');
+        content.classList.add('expanded');
+        header.classList.add('active');
+    } else {
+        content.classList.remove('expanded');
+        content.classList.add('collapsed');
+        header.classList.remove('active');
+    }
+}
+
+// Animate skill bars on scroll
+const observerOptions = {
+    threshold: 0.5,
+    rootMargin: '0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const skillBars = entry.target.querySelectorAll('.skill-bar');
+            skillBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0%';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 100);
+            });
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+// Observe skills section when it loads
+document.addEventListener('DOMContentLoaded', () => {
+    const skillsSection = document.querySelector('.skills-section');
+    if (skillsSection) {
+        observer.observe(skillsSection);
+    }
+});

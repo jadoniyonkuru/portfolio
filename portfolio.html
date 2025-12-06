@@ -16,18 +16,32 @@
         <nav>
             <a href="#home">Home</a>
             <a href="#about">About</a>
-            <a href="#resume">Resume</a>
+            <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
+            <a href="#resume">Resume</a>
+            <a href="#services">Services</a>
+            <a href="#testimonials">Testimonials</a>
             <a href="#contact">Contact</a>
         </nav>
-        <button id="theme-toggle">
-            <i id="theme-icon" class="fas fa-sun"></i>
-        </button>
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <div class="availability-status">
+                <span class="status-dot"></span>
+                <span class="status-text">Available for Work</span>
+            </div>
+            <button id="theme-toggle">
+                <i id="theme-icon" class="fas fa-sun"></i>
+            </button>
+        </div>
     </header>
 
     <section id="home" class="hero">
-        <h1>Welcome to My Portfolio</h1>
-        <p id="greeting-message">Good Day! Explore my work and achievements.</p>
+        <h1>Jean de Dieu NIYONKURU</h1>
+        <h2 class="hero-title">UI/UX Designer & Full Stack Developer</h2>
+        <p id="greeting-message">Creating beautiful, functional, and user-centered digital experiences</p>
+        <div class="hero-buttons">
+            <a href="#projects" class="btn-primary">View My Work</a>
+            <a href="#contact" class="btn-secondary">Get In Touch</a>
+        </div>
     </section>
 
     <section id="about" class="about">
@@ -35,31 +49,101 @@
         <div class="about-content">
             <div> <img src="jado.jpeg" alt="My Picture" class="About-image"></div>
             <div class="about-text">
-                <p>Hi, I'm Jean de Dieu NIYONKURU. <br>
-                    A dedicated professional specializing in UI/UX Designer </p>
-                <button class="toggle-btn">Download CV</button>
+                <p>Hi, I'm <strong>Jean de Dieu NIYONKURU</strong>.</p>
+                <p>A dedicated professional specializing in UI/UX Design and Full Stack Development. I'm passionate about creating intuitive, beautiful, and functional digital experiences that solve real-world problems.</p>
+                <p>With expertise in both front-end and back-end development, I bring a holistic approach to every project. I believe in clean code, user-centered design, and continuous learning.</p>
+                <button class="toggle-btn" onclick="downloadCV()">
+                    <i class="fas fa-download"></i> Download CV
+                </button>
             </div>
         </div>
-        <h3>My Skills</h3>
-        <button class="toggle-btn" id="toggle-skills" onclick="toggleSkills()">View My Skills</button>
-        <div class="skills hidden" id="skills-section">
-            <div class="skills-container">
-                <div class="skills-box">
-                    <p>HTML</p>
-                    <div class="skill-bar-container">
-                        <div class="skill-bar" style="width: 90%;"></div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <h2>Skills & Technologies</h2>
+        <div class="skills-container">
+            <div class="skills-category">
+                <h3><i class="fas fa-code"></i> Frontend</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML</span>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS</span>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-js"></i>
+                        <span>JavaScript</span>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-react"></i>
+                        <span>React</span>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 75%;"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="skills-box">
-                    <p>CSS</p>
-                    <div class="skill-bar-container">
-                        <div class="skill-bar" style="width: 80%;"></div>
+            </div>
+            <div class="skills-category">
+                <h3><i class="fas fa-server"></i> Backend</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fab fa-node"></i>
+                        <span>Node.js</span>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-database"></i>
+                        <span>MongoDB</span>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-database"></i>
+                        <span>SQL</span>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 70%;"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="skills-box">
-                    <p>JavaScript</p>
-                    <div class="skill-bar-container">
-                        <div class="skill-bar" style="width: 75%;"></div>
+            </div>
+            <div class="skills-category">
+                <h3><i class="fas fa-paint-brush"></i> Design</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fas fa-palette"></i>
+                        <span>UI/UX Design</span>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-figma"></i>
+                        <span>Figma</span>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-image"></i>
+                        <span>Adobe XD</span>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" style="width: 75%;"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -67,30 +151,250 @@
     </section>
 
     <section id="resume" class="resume">
-        <h2>Resume</h2>
-        <p>am certified in back-end and front end and am a developer with different languages</p>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <h2>Resume & Experience</h2>
+            <button onclick="downloadCV()" class="toggle-btn" style="margin: 0;">
+                <i class="fas fa-download"></i> Download Full Resume
+            </button>
+        </div>
+        <div class="resume-content">
+            <div class="resume-section">
+                <h3 class="resume-section-header" onclick="toggleResumeSection(this)">
+                    <i class="fas fa-briefcase"></i> Work Experience
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </h3>
+                <div class="resume-section-content collapsed">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">2023 - Present</div>
+                            <div class="timeline-content">
+                                <h4>Full Stack Developer</h4>
+                                <p class="company">Freelance</p>
+                                <p>Developing web applications using modern technologies. Working with clients to deliver custom solutions that meet their business needs.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2022 - 2023</div>
+                            <div class="timeline-content">
+                                <h4>UI/UX Designer</h4>
+                                <p class="company">Design Agency</p>
+                                <p>Created user-centered designs for web and mobile applications. Collaborated with development teams to ensure design implementation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="resume-section">
+                <h3 class="resume-section-header" onclick="toggleResumeSection(this)">
+                    <i class="fas fa-graduation-cap"></i> Education
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </h3>
+                <div class="resume-section-content collapsed">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">2020 - 2024</div>
+                            <div class="timeline-content">
+                                <h4>Bachelor's Degree in Computer Science</h4>
+                                <p class="company">University</p>
+                                <p>Specialized in Software Engineering and Web Development. Graduated with honors.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2022</div>
+                            <div class="timeline-content">
+                                <h4>Full Stack Web Development Certification</h4>
+                                <p class="company">Online Platform</p>
+                                <p>Completed comprehensive course covering front-end and back-end technologies.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="resume-section">
+                <h3 class="resume-section-header" onclick="toggleResumeSection(this)">
+                    <i class="fas fa-trophy"></i> Achievements
+                    <i class="fas fa-chevron-down toggle-icon"></i>
+                </h3>
+                <div class="resume-section-content collapsed">
+                    <ul class="achievements-list">
+                        <li><i class="fas fa-check-circle"></i> Certified in Back-end and Front-end Development</li>
+                        <li><i class="fas fa-check-circle"></i> Completed 20+ successful projects</li>
+                        <li><i class="fas fa-check-circle"></i> Maintained 100% client satisfaction rate</li>
+                        <li><i class="fas fa-check-circle"></i> Active contributor to open-source projects</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="resume-download">
+                <button class="toggle-btn" onclick="downloadCV()">
+                    <i class="fas fa-file-pdf"></i> Download Resume (PDF)
+                </button>
+            </div>
+        </div>
     </section>
 
-    <section class="projects">
+    <section id="projects" class="projects">
         <h2>My Projects</h2>
         <div class="projects-container">
             <div class="project-card">
-                <h3>Project 1</h3>
-                <p>marson management relationship.</p>
-                <a href="#">View More</a>
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/400x250/4CAF50/ffffff?text=CRM+System" alt="Marson Management Relationship">
+                    <div class="project-overlay">
+                        <a href="#" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="#" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Marson Management Relationship (CRM)</h3>
+                    <p>A comprehensive Customer Relationship Management system designed to help businesses manage their customer interactions, track sales, and improve customer satisfaction.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                    </div>
+                </div>
             </div>
             <div class="project-card">
-                <h3>Project 2</h3>
-                <p>electronics commerce project.</p>
-                <a href="#">View More</a>
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/400x250/00f2fe/ffffff?text=E-Commerce+Platform" alt="E-Commerce Project">
+                    <div class="project-overlay">
+                        <a href="#" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="#" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>E-Commerce Platform</h3>
+                    <p>A full-featured electronic commerce platform with shopping cart, payment integration, user authentication, and admin dashboard for product management.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Stripe API</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/400x250/4facfe/ffffff?text=Portfolio+Website" alt="Portfolio Website">
+                    <div class="project-overlay">
+                        <a href="#" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="#" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Personal Portfolio Website</h3>
+                    <p>A responsive and modern portfolio website showcasing projects, skills, and professional experience with dark mode support and smooth animations.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Responsive Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Services</h2>
+        <p class="services-intro">I offer a range of services to help bring your digital vision to life</p>
+        <div class="services-container">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3>UI/UX Design</h3>
+                <p>Creating intuitive and beautiful user interfaces that provide exceptional user experiences. From wireframes to high-fidelity prototypes.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Web Development</h3>
+                <p>Building responsive, fast, and scalable web applications using modern technologies and best practices.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Mobile-First Design</h3>
+                <p>Designing and developing websites that work seamlessly across all devices, prioritizing mobile experience.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Maintenance & Support</h3>
+                <p>Ongoing support, updates, and maintenance to keep your website running smoothly and securely.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2>Testimonials</h2>
+        <p class="testimonials-intro">What clients and colleagues say about working with me</p>
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"Jean delivered an outstanding CRM system that transformed how we manage customer relationships. Professional, timely, and exceeded expectations!"</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="author-info">
+                        <h4>John Smith</h4>
+                        <p>CEO, Tech Solutions Inc.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"Working with Jean was a pleasure. The e-commerce platform he built is not only beautiful but also highly functional. Great attention to detail!"</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="author-info">
+                        <h4>Sarah Johnson</h4>
+                        <p>Founder, ShopOnline</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"Jean's UI/UX design skills are exceptional. He created a user-friendly interface that our customers love. Highly recommended!"</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="author-info">
+                        <h4>Michael Brown</h4>
+                        <p>Product Manager, DesignCo</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="contact" class="contact">
         <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i><br>jeanniyonkuru001@gmail.com</a></p>
-        <p>WhatsApp: <a href="https://wa.me/1234567890" target="_blank">Chat with me</a></p>
+        <div class="contact-info">
+            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:jeanniyonkuru001@gmail.com">jeanniyonkuru001@gmail.com</a></p>
+            <p><i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/1234567890" target="_blank">Chat with me</a></p>
+            <div class="social-links">
+                <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
         <form>
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
