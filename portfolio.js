@@ -59,15 +59,15 @@ btn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 function downloadCV() {
     try {
         const link = document.createElement('a');
-        link.href = 'Jean de Dieu-NIYONKURU-Resume.pdf'; // Updated to match your actual resume filename
-        link.download = 'Jean_de_Dieu_NIYONKURU_Resume.pdf'; // Suggested filename for download
+        link.href = 'my cv.pdf'; // Using your CV file
+        link.download = 'Jean_de_Dieu_NIYONKURU_CV.pdf'; // Clean filename for download
         link.target = '_blank'; // Open in new tab if download fails
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
     } catch (error) {
         console.error('Error downloading CV:', error);
-        alert('There was an error downloading the resume. Please try again.');
+        alert('There was an error downloading the CV. Please try again.');
     }
 }
 

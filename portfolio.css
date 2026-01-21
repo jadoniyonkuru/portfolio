@@ -303,15 +303,66 @@ body.dark-theme .hero {
 
 /* About Section */
 .about {
-    background-color: var(--light-bg);
-    padding: 60px 20px;
+    padding: 100px 20px;
     text-align: center;
-    color: var(--text-light);
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    text-align: left;
+}
+
+.about-image-container {
+    flex: 1;
+    max-width: 400px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.about-image-container:hover .about-image {
+    transform: scale(1.03);
+}
+
+.about-text {
+    flex: 1;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: var(--text-color-light);
+    font-size: 1.1em;
 }
 
 .about h2 {
     font-size: 2.5em;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
     color: var(--primary);
     position: relative;
     display: inline-block;
